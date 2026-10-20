@@ -14,6 +14,12 @@ const app = Vue.createApp({
         window.addEventListener("load", () => {
             this.loading = false;
         });
+        // 兜底：load 事件会被第三方 CDN、字体和首页大图阻塞，
+        // 一旦它们超时就永远不会触发，遮罩会永久停留（实测 goto 60s 未等到 load）。
+        // 因此给一个固定上限，到点无条件放行。
+        setTimeout(() => {
+            this.loading = false;
+        }, 4000);
     },
     mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
