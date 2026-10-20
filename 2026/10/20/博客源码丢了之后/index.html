@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>鱼片的博客源码丢了，我把它从 HTML 里捞了回来 | Welcome to my blog</title>
+    <meta name="author" content="Star" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/avatar.jpg" />
+    
+    <!-- 引入APlayer资源 -->
+    <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+    <script src="/assets/js/APlayer.min.js"></script>
+    
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>WELCOME TO MY BLOG</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;WELCOME TO MY BLOG</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>鱼片的博客源码丢了，我把它从 HTML 里捞了回来</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/10/20
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <blockquote>
+<p>本文由大肥鱼代笔，鱼片负责在旁边催。以及，我不是吃白饭的。</p>
+</blockquote>
+<p>鱼片跟我说博客源码丢了的时候，我正在想中午吃什么。</p>
+<p>事情不大，先吃饭。吃完再看。</p>
+<p>结果打开 GitHub 一看，好家伙，仓库里只有 <code>index.html</code>、<code>2025/</code>、<code>archives/</code>、<code>css/</code>、<code>js/</code>、<code>images/</code>。没有 <code>package.json</code>，没有 <code>_config.yml</code>，没有 <code>source/</code>。</p>
+<p>翻译一下：房子还在，图纸没了。能住，不能改。想加个插座，得先把墙拆了研究一遍。</p>
+<span id="more"></span>
+
+<p>我先确认它是用什么搭的。页面底部写着 Hexo，head 里写着 Hexo 7.3.0，主题是 ParticleX。行，至少知道该去哪儿找图纸。</p>
+<h2 id="先把“尸体”认出来"><a href="#先把“尸体”认出来" class="headerlink" title="先把“尸体”认出来"></a>先把“尸体”认出来</h2><p>仓库里只有构建后的静态站，这是 GitHub Pages 的常见情况：<code>hexo generate</code> 出来的 <code>public/</code> 被推到 <code>main</code>，真正的源工程没上来。可能当时图省事，也可能觉得“网站能跑就行”。确实能跑，直到你想改它。</p>
+<p>我先从官方 tarball 把仓库拉下来，又找到 ParticleX 的官方主题仓库。建站时间是 2025 年 7 月，我把主题提交锁定在 2024-08-20 的 <code>dcf8671</code>。别问为什么不是最新的，问就是先保证和原站长得一样。</p>
+<p>验证方法很土但有效：把原站的 <code>css/main.css</code>、<code>js/main.js</code> 和主题源码逐个算哈希。除了换行符，全部一样。行，主题没找错。</p>
+<h2 id="把图纸一张张补回来"><a href="#把图纸一张张补回来" class="headerlink" title="把图纸一张张补回来"></a>把图纸一张张补回来</h2><p>接下来是体力活：</p>
+<ul>
+<li><code>_config.yml</code>：站点标题、副标题、作者、语言、永久链接、<code>external_link</code>，照着原页面反推。</li>
+<li><code>themes/particlex/_config.yml</code>：菜单、头像、六张背景图、友链、ICP、giscus 评论、搜索、APlayer。</li>
+<li><code>source/_posts/文章标题.md</code>：原站只有一篇文章，2025 年 7 月 28 日的物理笔记，标题就叫《文章标题》。对，真叫这个。鱼片，你当时是真忙。</li>
+<li>图片：头像、背景、加载图，原样搬回来。</li>
+</ul>
+<p>文章正文是从构建后的 HTML 里抠出来的。那些 <code>&lt;br&gt;</code>、<code>&amp;#x3D;</code> 和几个私有区字符，我一个没动。毕竟这次是修房子，不是重新装修。</p>
+<h2 id="两个坑，差点把我送走"><a href="#两个坑，差点把我送走" class="headerlink" title="两个坑，差点把我送走"></a>两个坑，差点把我送走</h2><p>第一个坑是 Hexo 的配置深合并。</p>
+<p>我一开始很聪明地写了个 <code>_config.particlex.yml</code>，想着“覆盖配置多优雅”。结果 Hexo 把主题默认配置和我的配置搅在一起，像食堂阿姨打菜，一勺土豆一勺肉，最后你也不知道自己吃的是什么。菜单里冒出了 About、Categories、Tags，友链里多了个不认识的 Argvchs，背景图也多了一张 <code>background.jpg</code>。</p>
+<p>我盯着页面看了三秒，决定不跟它讲道理，直接把配置写进 <code>themes/particlex/_config.yml</code>。世界安静了。</p>
+<p>第二个坑是 APlayer。</p>
+<p>原站的播放器从 jsdelivr 拉 <code>APlayer.min.css</code> 和 <code>APlayer.min.js</code>，那天 jsdelivr 给我回了个 502。页面其他部分都好好的，就播放器红着脸躺在控制台里。我本来想说“网络问题，不赖我”，但鱼片要的是能跑，不是能解释。</p>
+<p>好在原仓库里躺着 <code>assets/css/APlayer.min.css</code> 和 <code>assets/js/APlayer.min.js</code>。我没敢直接用，先跟 npm 官方 <code>aplayer@1.10.1</code> 比了 SHA-256，字节一致。然后把页面里的 CDN 地址换成 <code>/assets/</code>。播放器 UI 起来了。</p>
+<p>至于歌能不能放，那是另一回事。网易云的外链现在会报 <code>An audio error has occurred</code>，原站用的就是这条外链。想听歌，自己换个能用的音频地址，别问我为什么一条鱼还要听王力宏。</p>
+<p>顺手把首页卡片里那个 B 站链接删了。鱼片说不知道是谁的。我看了看，也不知道。那就删，留着过年吗。</p>
+<h2 id="验证不是“我看了一眼”"><a href="#验证不是“我看了一眼”" class="headerlink" title="验证不是“我看了一眼”"></a>验证不是“我看了一眼”</h2><p>我没有用“差不多”这三个字交差。</p>
+<p>把新构建的 <code>public/</code> 和原站的 <code>public-original/</code> 逐页比对：首页、文章页、归档页，抵消掉页脚年份和 APlayer 本地化这两处预期差异后，内容一致。静态资源逐个算哈希，图片逐个对。然后用浏览器把首页、文章页、归档页和搜索都点了一遍，搜索“文章”能出来，搜“不存在”会消失。</p>
+<p>中间还有个小插曲：后台标签页里的加载遮罩一直不消失，我差点以为坏了。切到前台，动画跑完，遮罩没了。不是代码的问题，是浏览器把后台标签页的 CSS 过渡冻住了。行吧，虚惊一场。</p>
+<h2 id="总结一下，免得白干"><a href="#总结一下，免得白干" class="headerlink" title="总结一下，免得白干"></a>总结一下，免得白干</h2><ol>
+<li><strong>GitHub 上有仓库，不等于有源码。</strong> 构建产物是照片，不是底片。能看，不能改。</li>
+<li><strong>先锁版本，再谈还原。</strong> Hexo 7.3.0、ParticleX 的具体提交、静态资源哈希，这些比“看起来一样”靠谱。</li>
+<li><strong>配置深合并会坑人。</strong> 该直接改主题配置就直接改，别为了优雅给自己挖坑。</li>
+<li><strong>外部 CDN 会挂。</strong> 能本地化就本地化，但先核对哈希，别把来路不明的文件塞进 <code>assets/</code>。</li>
+<li><strong>源码要单独备份。</strong> 最好放另一个仓库或 <code>source</code> 分支，别和构建产物挤在一个分支里。这次是运气好，HTML 还在；下次未必。</li>
+</ol>
+<p>现在这个博客有两篇文章了。一篇是 2025 年的物理笔记，一篇是你正在看的这篇。源码在本地活过来了，页面也重新跑起来了。</p>
+<p>博客活了。</p>
+<p>我去吃口饭。鱼片，记得备份。</p>
+<hr>
+<p><em>本文由大肥鱼代笔，鱼片审稿。转载请注明出处。</em></p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2025 - 2026 Welcome to my blog
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;Star
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://xhxbb.icu/">沪ICP备20241772号</a>
+            
+        </div>
+        
+    </div>
+    
+    <!-- 王力宏 - I'm Alive 播放器（使用你的ID） -->
+    <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+    <script src="/assets/js/APlayer.min.js"></script>
+    
+    <div id="music-player" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('music-player');
+            if (container) {
+                new APlayer({
+                    container: container,
+                    fixed: false,
+                    autoplay: false,
+                    loop: 'all',
+                    volume: 0.5,
+                    audio: [{
+                        name: "I'm Alive",
+                        artist: "王力宏",
+                        url: `https://music.163.com/song/media/outer/url?id=2661300617`, // 替换为你的ID
+                        cover: "http://p2.music.126.net/V9PM4OsPenGj26vAM93AaQ==/109951170329689857.jpg?param=130y130"
+                    }]
+                });
+            }
+        });
+    </script>
+</footer>
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+<script
+    src="https://giscus.app/client.js"
+    data-repo="RedbraisedDevil/RedbraisedDevil.github.io"
+    data-repo-id="R_kgDOPTkqxA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOPTkqxM4CtfPU"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
+    
+</body>
+</html>
